@@ -1,14 +1,1 @@
-# microservices
-
-## Topics
-* health monitoring
-* deployment
-* containers
-* golang v. netcore
-* identity and access management
-* oop similarities
-* logging
-* REST v RPC v GraphQL v ...
-* cloud v on-prem
-* message queues
-* 
+This is the repository for CS 480B "Introduction to Modern Service Oriented Architectures".
