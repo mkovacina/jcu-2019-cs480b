@@ -90,7 +90,7 @@ The grade for the class will be composed of attendance, homework, and the final 
 # Policies
 
 *Policy on Class Attendance*  
-Class attendance is required as part of this course. You will be awarded one point for every class period in which you are present – not counting exam days or days that class is canceled due. 
+Class attendance is required as part of this course. You will be awarded one point for every class period in which you are present – not counting exam days or days that class is canceled. 
 
 Excused absences must be prearranged with the instructor. 
 
