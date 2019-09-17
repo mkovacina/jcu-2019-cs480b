@@ -27,6 +27,8 @@
         * A network data object or service which can be identified by a
        URI 
     * user-agent
+	* header
+	* cookie
 * media types
     * aka MIME types
     * this is how browsers identify the type of content, not through file extensions
