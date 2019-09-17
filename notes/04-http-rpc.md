@@ -135,5 +135,10 @@
 
 # references
 [RFC2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html)
+
 [Wikipedia: http](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+
+[Wikipedia: http status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+
 [Wikipedia: rpc](https://en.wikipedia.org/wiki/Remote_procedure_call)
+
