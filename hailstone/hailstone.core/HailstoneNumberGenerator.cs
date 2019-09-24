@@ -19,7 +19,12 @@ namespace hailstone.core
         /// Generates the sequence of hailstone numbers for the input.
         /// </summary>
         /// <param name="input">The number for which to generate a hailstone number sequence.</param>
-        /// <returns>The hailsone number sequence for the input.</returns>
+        /// <returns>The hailstone number sequence for the input.</returns>
         IEnumerable<long> GenerateSequence(long input);
+
+	    /// <summary>
+		/// Returns a unique identifier.
+		/// </summary>
+        Guid ID { get; }
     }
 }

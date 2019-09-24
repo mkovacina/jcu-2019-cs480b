@@ -23,6 +23,7 @@ namespace hailstone.console
 
 			HailstoneNumberGenerator generator = new NaiveHailstoneNumberGenerator();
 
+			Console.WriteLine(generator.ID);
 			DoStuff_Injected(generator);
 			DoStuff_NotInjected();
 
