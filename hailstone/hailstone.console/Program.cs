@@ -7,6 +7,8 @@ namespace hailstone.console
 	{
 		private static void Main(string[] args)
 		{
+			EnumerableUsages.Sample1();
+
 			if (args.Length == 0)
 			{
 				Console.Error.WriteLine("usage: dotnet hailstone.console <input as integer>");
