@@ -70,7 +70,7 @@
 * when to use it
     * migrating away from a monolithic application
 
-# refences
+# references
 1. https://www.javaworld.com/article/2071889/what-is-service-oriented-architecture.html
 2. https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/service-oriented-architecture
 3. http://www.opengroup.org/soa/source-book/soa/p4.htm
