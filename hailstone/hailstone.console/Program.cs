@@ -1,18 +1,26 @@
 ﻿using hailstone.core;
 using System;
 
+// https://oeis.org/A006577
+
 namespace hailstone.console
 {
 	internal class Program
 	{
 		private static void Main(string[] args)
 		{
-			EnumerableUsages.Sample1();
-
 			if (args.Length == 0)
 			{
 				Console.Error.WriteLine("usage: dotnet hailstone.console <input as integer>");
-				return;
+
+				// !!!!!
+				// yes, c# has goto
+				// yes, i'm using it here to get us down to the 
+				//		ReadKey() to keep the console from disappearing
+				//		while debugging in visual studio
+				// no, you don't really have many opportunities to use it in real life
+				// caveat programmor
+				goto end;
 			}
 
 			bool result = long.TryParse(args[0], out long input);
@@ -20,7 +28,7 @@ namespace hailstone.console
 			if (!result)
 			{
 				Console.Error.WriteLine("The input was not an integer.");
-				return;
+				goto end;
 			}
 
 			HailstoneNumberGenerator generator = new NaiveHailstoneNumberGenerator();
@@ -32,6 +40,15 @@ namespace hailstone.console
 			long hailstoneNumber = generator.ComputeHailstoneNumber(input);
 
 			Console.WriteLine(hailstoneNumber);
+
+			var sequence = generator.GenerateSequence(input);
+
+			foreach(var item in sequence)
+			{
+				Console.Write(item+", ");
+			}
+			end:
+			Console.ReadKey();
 		}
 
 		/// <summary>

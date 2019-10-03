@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "hailstone.console": {
+      "commandName": "Project",
+      "commandLineArgs": "5"
+    }
+  }
+}
