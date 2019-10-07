@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hailstone.core.tests", "hai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hailstone.api", "hailstone.api\hailstone.api.csproj", "{D4E099F3-CEDC-4A45-89F2-345AEC6C5D28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hailstone.api.tests", "hailstone.api.tests\hailstone.api.tests.csproj", "{51A10250-337D-444F-B205-B336E2168FB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{D4E099F3-CEDC-4A45-89F2-345AEC6C5D28}.Release|x64.Build.0 = Release|Any CPU
 		{D4E099F3-CEDC-4A45-89F2-345AEC6C5D28}.Release|x86.ActiveCfg = Release|Any CPU
 		{D4E099F3-CEDC-4A45-89F2-345AEC6C5D28}.Release|x86.Build.0 = Release|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Debug|x64.Build.0 = Debug|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Debug|x86.Build.0 = Debug|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Release|x64.ActiveCfg = Release|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Release|x64.Build.0 = Release|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Release|x86.ActiveCfg = Release|Any CPU
+		{51A10250-337D-444F-B205-B336E2168FB3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
