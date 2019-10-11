@@ -1,4 +1,5 @@
 ﻿using hailstone.core;
+using Microsoft.Extensions.Logging;
 using System;
 
 // https://oeis.org/A006577
@@ -9,6 +10,22 @@ namespace hailstone.console
 	{
 		private static void Main(string[] args)
 		{
+			LoggerFactory loggerFactory = new LoggerFactory();
+#pragma warning disable CS0618 // Type or member is obsolete
+			loggerFactory.AddConsole(includeScopes:true);
+#pragma warning restore CS0618 // Type or member is obsolete
+
+			//ILogger logger = loggerFactory.CreateLogger("logger");
+			ILogger<Program> logger = loggerFactory.CreateLogger<Program>();
+
+			using (logger.BeginScope("user is {name}","mike"))
+			{
+				logger.LogDebug("debug");
+				logger.LogInformation("hello");
+				logger.LogError("this is an error");
+			}
+
+
 			if (args.Length == 0)
 			{
 				Console.Error.WriteLine("usage: dotnet hailstone.console <input as integer>");
@@ -33,19 +50,19 @@ namespace hailstone.console
 
 			HailstoneNumberGenerator generator = new NaiveHailstoneNumberGenerator();
 
-			Console.WriteLine(generator.ID);
+			//Console.WriteLine(generator.ID);
 			DoStuff_Injected(generator);
 			DoStuff_NotInjected();
 
 			long hailstoneNumber = generator.ComputeHailstoneNumber(input);
 
-			Console.WriteLine(hailstoneNumber);
+		//	Console.WriteLine(hailstoneNumber);
 
-			var sequence = generator.GenerateSequence(input);
+			System.Collections.Generic.IEnumerable<long> sequence = generator.GenerateSequence(input);
 
-			foreach(var item in sequence)
+			foreach (long item in sequence)
 			{
-				Console.Write(item+", ");
+				//Console.Write(item + ", ");
 			}
 			end:
 			Console.ReadKey();
