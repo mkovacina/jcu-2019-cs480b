@@ -6,12 +6,19 @@ to provide an overview of the microservices philosophy
 you dont need to be the leader to lead
 
 DAEMON
+
 detatch
+
 aggressive
+
 ego
+
 misson
+
 ownership
+
 negotiation
+
 
 # notes
 - "an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API" [1]
