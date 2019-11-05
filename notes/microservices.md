@@ -70,6 +70,6 @@ negotiation
 
 [2] [fowler: microservices guide](https://www.martinfowler.com/microservices/)
 
-[3] [microservices.io](https://microservices.io
+[3] [microservices.io](https://microservices.io)
 
 
