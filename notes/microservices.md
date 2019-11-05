@@ -13,7 +13,7 @@ aggressive
 
 ego
 
-misson
+mission
 
 ownership
 
