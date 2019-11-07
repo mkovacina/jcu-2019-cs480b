@@ -8,6 +8,13 @@ namespace hailstone.core
     /// </summary>
     public interface HailstoneNumberGenerator
     {
+		/// <summary>
+		/// Computes hailstone number and sequence for a given input.
+		/// </summary>
+		/// <param name="input">The given input</param>
+		/// <returns>The computed hailstone number information</returns>
+		HailstoneInformation ComputeHailstoneInformation(long input);
+
         /// <summary>
         /// Computes the hailstone number for the input.
         /// </summary>

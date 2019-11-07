@@ -18,10 +18,11 @@ namespace Tests
 			var generator = new NaiveHailstoneNumberGenerator();
 			var controller = new HailstoneController(generator);
 
-			var actual = controller.Get(5);
+			ActionResult<HailstoneInformation> actual = controller.Get(5);
+			HailstoneInformation value = actual.Value;
 
-			Assert.That(actual.Value.Number, Is.EqualTo(5));
-			Assert.That(actual.Value.Sequence, Is.EquivalentTo(new long[]{5,16,8,4,2,1}));
+			Assert.That(value.Number, Is.EqualTo(5));
+			Assert.That(value.Sequence, Is.EquivalentTo(new long[]{5,16,8,4,2,1}));
 		}
 	}
 }

@@ -75,6 +75,15 @@ namespace hailstone.core
 			return list;
 		}
 
+		public HailstoneInformation ComputeHailstoneInformation(long input)
+		{
+			var hailstoneNumber = ComputeHailstoneNumber(input);
+			var sequence = GenerateSequence(input);
+			var result = new HailstoneInformation(input, hailstoneNumber, sequence);
+
+			return result;
+		}
+
 		public Guid ID => guid;
 	}
 }

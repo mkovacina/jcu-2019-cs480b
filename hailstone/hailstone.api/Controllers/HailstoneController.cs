@@ -28,13 +28,28 @@ namespace hailstone.api.Controllers
 
 		// GET api/values/5
 		[HttpGet("{id}")]
-		public ActionResult<HailstoneData> Get(int id)
+		public ActionResult<HailstoneInformation> Get(int id)
 		{
-			var data = new HailstoneData();
-			data.Number = Generator.ComputeHailstoneNumber(id);
-			data.Sequence = Generator.GenerateSequence(id);
-			
+			if (id < 0 )
+			{
+				throw new ArgumentOutOfRangeException();
+			}
+
+			//var data = new HailstoneData();
+			//data.Number = Generator.ComputeHailstoneNumber(id);
+			//data.Sequence = Generator.GenerateSequence(id);
+
+			//return data;
+
+			var data = Generator.ComputeHailstoneInformation(id);
 			return data;
+
+			////// mapping to filter and transform
+			////var result = new HailstoneData();
+			////result.Number = data.HailstoneNumber;
+			////result.Sequence = data.Sequence;
+
+			////return result;
 		}
 
 		// POST api/values

@@ -16,6 +16,11 @@ namespace hailstone.core
 			throw new NotImplementedException();
 		}
 
+		public HailstoneInformation ComputeHailstoneInformation(long input)
+		{
+			throw new NotImplementedException();
+		}
+
 		public Guid ID { get; }
 	}
 }

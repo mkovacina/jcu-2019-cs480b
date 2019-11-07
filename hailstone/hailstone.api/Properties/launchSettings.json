@@ -11,6 +11,7 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
+      "workingDirectory": "C:\\Users\\mkovacina\\source\\github\\mkovacina\\jcu-2019-cs480b\\hailstone\\hailstone.api",
       "launchBrowser": true,
       "launchUrl": "api/hailstone/5",
       "environmentVariables": {
@@ -19,8 +20,9 @@
     },
     "hailstone.api": {
       "commandName": "Project",
+      "workingDirectory": "C:\\Users\\mkovacina\\source\\github\\mkovacina\\jcu-2019-cs480b\\hailstone\\hailstone.api",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "api/#",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
