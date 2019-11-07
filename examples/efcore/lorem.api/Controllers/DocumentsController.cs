@@ -48,9 +48,19 @@ namespace lorem.api.Controllers
 		/// <param name="id">The id of the document to get.</param>
 		/// <returns>The document.</returns>
 		[HttpGet("{id}")]
-		public ActionResult<string> Get(int id)
+		public ActionResult<Document> Get(long id)
 		{
-			return "value";
+			var document = _context.Documents.SingleOrDefault(d => d.Id == id);
+
+			if (document == null)
+			{
+				return NotFound();
+			}
+
+			return new Document()
+			{
+				Title = document.Title
+			}; 
 		}
 	}
 }

@@ -21,7 +21,7 @@
             </summary>
             <returns>All the documents.</returns>
         </member>
-        <member name="M:lorem.api.Controllers.DocumentsController.Get(System.Int32)">
+        <member name="M:lorem.api.Controllers.DocumentsController.Get(System.Int64)">
             <summary>
             Gets a specific document.
             </summary>
