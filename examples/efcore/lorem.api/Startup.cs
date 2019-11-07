@@ -40,7 +40,7 @@ namespace lorem.api
 		{
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 			// setup to use a sqlite database
-			services.AddDbContext<LoremContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")),ServiceLifetime.Transient);
+			services.AddDbContext<LoremContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 		}
 
 		/// <summary>

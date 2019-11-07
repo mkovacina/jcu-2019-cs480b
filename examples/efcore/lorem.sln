@@ -9,10 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lorem.core", "lorem.core\lo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{37B93ADB-111D-46C2-878A-37C9F9992A1C}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\homework\hw-03.md = ..\..\homework\hw-03.md
 		readme.md = readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lorem.api", "lorem.api\lorem.api.csproj", "{B25A0F24-5A89-48DE-836F-089A074054FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lorem.api", "lorem.api\lorem.api.csproj", "{B25A0F24-5A89-48DE-836F-089A074054FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
