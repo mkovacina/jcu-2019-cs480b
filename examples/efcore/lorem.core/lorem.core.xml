@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>lorem.core</name>
+    </assembly>
+    <members>
+        <member name="T:lorem.core.Author">
+            <summary>
+            The author of a document.
+            </summary>
+        </member>
+        <member name="P:lorem.core.Author.Id">
+            <summary>
+            The unique identifier for the author.
+            </summary>
+        </member>
+        <member name="P:lorem.core.Author.FirstName">
+            <summary>
+            The first name of the author.
+            </summary>
+        </member>
+        <member name="P:lorem.core.Author.LastName">
+            <summary>
+            The last name fo the author
+            </summary>
+        </member>
+        <member name="T:lorem.core.Note">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:lorem.core.Note.ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:lorem.core.LoremContext">
+            <summary>
+            The database context that provides access to document and other data.
+            </summary>
+        </member>
+        <member name="M:lorem.core.LoremContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:lorem.core.LoremContext.Documents">
+            <summary>
+            Used to access documents in the database.
+            </summary>
+        </member>
+        <member name="P:lorem.core.LoremContext.Authors">
+            <summary>
+            Used to access authors in the database.
+            </summary>
+        </member>
+        <member name="P:lorem.core.LoremContext.Notes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:lorem.core.LoremContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="T:lorem.core.Document">
+            <summary>
+            A document in the system.
+            </summary>
+        </member>
+        <member name="P:lorem.core.Document.Id">
+            <summary>
+            The unique identifier for the document.
+            </summary>
+        </member>
+        <member name="P:lorem.core.Document.Title">
+            <summary>
+            The title of the document.
+            </summary>
+        </member>
+        <member name="P:lorem.core.Document.Authors">
+            <summary>
+            The collection of authors of the document
+            </summary>
+        </member>
+    </members>
+</doc>
