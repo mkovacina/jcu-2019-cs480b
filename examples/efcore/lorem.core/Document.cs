@@ -33,6 +33,6 @@ namespace lorem.core
 		/// <summary>
 		/// The relation of document to author
 		/// </summary>
-		public ICollection<DocumentAuthor> DocumentAuthor { get; set; }
+		public ICollection<DocumentAuthor> DocumentAuthor { get; set; } = new List<DocumentAuthor>();
 	}
 }

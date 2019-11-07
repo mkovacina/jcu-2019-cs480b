@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>lorem.api</name>
+    </assembly>
+    <members>
+        <member name="T:lorem.api.Controllers.DocumentsController">
+            <summary>
+            API controller for the '/documents' resource.
+            </summary>
+        </member>
+        <member name="M:lorem.api.Controllers.DocumentsController.#ctor(lorem.core.LoremContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="context">The database context to data access.</param>
+        </member>
+        <member name="M:lorem.api.Controllers.DocumentsController.Get">
+            <summary>
+            Returns all the documents.
+            </summary>
+            <returns>All the documents.</returns>
+        </member>
+        <member name="M:lorem.api.Controllers.DocumentsController.Get(System.Int32)">
+            <summary>
+            Gets a specific document.
+            </summary>
+            <param name="id">The id of the document to get.</param>
+            <returns>The document.</returns>
+        </member>
+        <member name="T:lorem.api.models.Author">
+            <summary>
+            Model for an author
+            </summary>
+        </member>
+        <member name="P:lorem.api.models.Author.FirstName">
+            <summary>
+            The first name of the author
+            </summary>
+        </member>
+        <member name="P:lorem.api.models.Author.LastName">
+            <summary>
+            The last name of the author
+            </summary>
+        </member>
+        <member name="T:lorem.api.models.Document">
+            <summary>
+            Model for a document
+            </summary>
+        </member>
+        <member name="P:lorem.api.models.Document.Title">
+            <summary>
+            The title of the document
+            </summary>
+        </member>
+        <member name="T:lorem.api.Startup">
+            <summary>
+            The startup class for this API
+            </summary>
+        </member>
+        <member name="M:lorem.api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration">The configuration for the application</param>
+        </member>
+        <member name="M:lorem.api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure the services for the application.
+            </summary>
+            <param name="services">The collection of service.</param>
+        </member>
+        <member name="M:lorem.api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">The application builder</param>
+            <param name="env">The hosting environment</param>
+        </member>
+    </members>
+</doc>
