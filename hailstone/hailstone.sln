@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hailstone.console", "hailst
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hailstone.core", "hailstone.core\hailstone.core.csproj", "{A7BBAF0C-F9D6-4BD4-8D30-8787E46C99DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hailstone.core.tests", "hailstone.core.tests\hailstone.core.tests.csproj", "{CBC561AC-8276-47FA-B83F-020FD2DF39F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hailstone.core.tests", "hailstone.core.tests\hailstone.core.tests.csproj", "{CBC561AC-8276-47FA-B83F-020FD2DF39F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hailstone.api", "hailstone.api\hailstone.api.csproj", "{D4E099F3-CEDC-4A45-89F2-345AEC6C5D28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hailstone.api", "hailstone.api\hailstone.api.csproj", "{D4E099F3-CEDC-4A45-89F2-345AEC6C5D28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hailstone.api.tests", "hailstone.api.tests\hailstone.api.tests.csproj", "{51A10250-337D-444F-B205-B336E2168FB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hailstone.api.tests", "hailstone.api.tests\hailstone.api.tests.csproj", "{51A10250-337D-444F-B205-B336E2168FB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hailsone.sample.client", "hailsone.sample.client\hailsone.sample.client.csproj", "{76A24DD6-015B-40A3-A556-195DF5CAC69D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,18 @@ Global
 		{51A10250-337D-444F-B205-B336E2168FB3}.Release|x64.Build.0 = Release|Any CPU
 		{51A10250-337D-444F-B205-B336E2168FB3}.Release|x86.ActiveCfg = Release|Any CPU
 		{51A10250-337D-444F-B205-B336E2168FB3}.Release|x86.Build.0 = Release|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Debug|x64.Build.0 = Debug|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Debug|x86.Build.0 = Debug|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Release|x64.ActiveCfg = Release|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Release|x64.Build.0 = Release|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Release|x86.ActiveCfg = Release|Any CPU
+		{76A24DD6-015B-40A3-A556-195DF5CAC69D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

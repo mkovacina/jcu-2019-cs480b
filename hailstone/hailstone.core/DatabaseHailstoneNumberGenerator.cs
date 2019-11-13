@@ -52,7 +52,7 @@ namespace hailstone.core
 		public HailstoneInformation ComputeHailstoneInformation(long input)
 		{
 			var hn = ComputeHailstoneNumber(input);
-			var model = new HailstoneInformation(input, hn, Enumerable.Empty<long>());
+			var model = new HailstoneInformation(input, hn, generator.GenerateSequence(input));
 			return model;
 		}
 	}
