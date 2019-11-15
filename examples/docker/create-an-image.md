@@ -1,6 +1,9 @@
 Reference
 https://docs.docker.com/get-started/part2/
 
+Setup
+Be sure you are in the `.\node-bulletin-board\bulletin-board-app\` directory
+
 `docker image build -t bulletinboard:1.0 .`
 
 creates the image for the application 
