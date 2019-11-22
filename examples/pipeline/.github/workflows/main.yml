@@ -1,0 +1,45 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo Hello, world!
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
+
+    - name: Setup Dotnet for use with actions
+      uses: actions/setup-dotnet@v1.0.0
+      
+    - run: |
+        dotnet build
+        
+    - run: |
+        dotnet test
+        
+    - uses: azure/docker-login@v1
+      with:
+        #login-server: contoso.azurecr.io
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+    
+    - run: |
+        docker build . -t michaelkovacina/sample1722:${{ github.sha }} -t michaelkovacina/sample1722:latest
+        
+    - run: |
+        docker push michaelkovacina/sample1722:${{ github.sha }}
+    
+    - run: |
+        docker push michaelkovacina/sample1722:latest
+
+    
+      
+      
