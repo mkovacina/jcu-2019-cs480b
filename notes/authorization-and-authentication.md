@@ -1,0 +1,148 @@
+# objective
+to provide a basic overview of authentication and authorization in the modern day
+# tangent
+
+# notes
+- simple definitions
+	- authentication
+		- validating who you are
+		- shortened to "authn"
+	- authorization
+		- validationg what you have permission to do
+		- shortened to "authz"
+	- principle
+		- an entity that can be authenticated
+- authentication
+	- identity can be established by
+		- what you know
+			- password
+			- pin
+		- what you have
+			- hardware key
+			- certificate
+			- access card
+			- software token
+			- security token
+			- device
+		- what you are
+			- biometric
+				- fingerprint 
+				- retinal scan
+				- voice print
+	- factored authentication
+		- single factor
+			- only requires a user to present a single credential to establish idenity
+			- most commonly seen via password-based authentication
+				- see "password haystacks" in the reference for a guide on choosing passwords
+		- two-factor
+			- two step authentication
+			- for example, password and being texted a code
+		- multi-factor
+			- highest level of verification
+			- each factor should be independent
+	- positive identification also is required for proper logging and auditing
+	- authentication schemes for HTTP
+		- the basic flow
+			- user sends a request for a resource
+			- the server replies with `401 "Unauthorized"` and header information regarding authorization expectations
+			- browser prompts for credentials
+			- request sent again with propert authorization header
+		- digest access authentication (obsolete)
+			- a hash of the user credentials is sent to the server
+				- a hash is a one-way function 
+				- the default hash function is MD5
+			- a nonce (number used once) should be used to prevent replay attacks
+			- suscptible to MitM (man-in-the-middle) attacks as there is no build-in method of verifying the server identity (TLS)
+		- basic access authentication (basic auth)
+			- uses username and password
+			- leverages the `Authorization` header
+				- `Authorization: Basic <credentials>`
+					- `<credentials>` = Base64(username+":"+password)
+						- repeate after me, Base64 ENCODING is not ENCRYPTION
+			- must be supplied on every request
+				- no cookies, sessions (stateless), or anything else required
+				- blurs authn and authz
+				- not secure on its own
+					- the password is being sent in plaintext over the internet
+		- form-based authentication
+			- similar to basic auth but not built-in to a browser
+			- the site sends an HTML Form to collect username and password
+				- no longer using HTTP primitives for authentication directly
+				- once validated, usually a cookie is set
+				- this now brings us to the blurred line between authentication and session managment
+			- data is sent via POST when the form is submitted
+			- phishable as HTML is easily copied
+				- this is why that 'lock' icon has become so important lately
+		- bearer authentication
+			- uses a token ("give access to the bearer of this token")
+			- concptually similar to a phsical key
+			- `Authorization: Bearer <token>`
+			- token formats
+				- Self-contained
+					- JSON Web Token (JWT, pronounced 'JawT')
+						- RFC 7519
+						- "self-describing" bearer token
+						- three parts
+							- header
+								- describes the rest of the token
+							- body
+								- JSON data
+							- signature
+								- provides integrity
+						- since self-contained, it is stateless
+						- example
+							- xxxxxx.yyyyyy.zzzzzz
+							- xxxxxx is the header JSON information Base64URL encoded
+							- yyyyyy is the body JSON information Base64URL encoded
+							- zzzzzz is the signature of the encoded header and body plus a secret
+						- challenges with JWT
+							- encoded not encrypted
+							- cannot be revoked
+								- easily
+								- must provide "short" lifetimes
+				- Reference Token
+					- an identifier for a token, not a token itself per se
+					- a pointer to a token
+					- when presented to a service, a service must first dereference/introspect the token by reaching out to another service to validate the reference
+					- compared to self-contained tokens, reference tokens provide more control over the token lifetime at the cost of a network call
+						- API gateways can provide the best of both worlds at the cost of some deployment complexity
+- authorization
+	- the process of determining an authenticated user's level of access to a specific resource
+	- for example, permissions on a file are tied to user identity
+	- can be very system/implementation specific
+	- from a user perspective it is binary
+	- OAuth 2.0
+		- RFC 6749
+		- a framework for a third-party to gain access to a HTTP service
+		- separates the role of the client from the resource owner
+		- allows a resource owner to grant limited access to a third-party
+			- example: Mint
+				- do you want to given Mint the username and password for your bank account, or would your rather grant them "read-only permissions to a single account"?
+		- the abstract flow
+			- a 'client' sends an 'authorization request' to a 'resource owner'
+			- the 'resource owner' replies with an 'authorization grant'
+			- the 'client' sends the 'authorization grant' to the 'authorization server'
+			- the 'authorization server' replies with an 'access token'
+			- the 'client' sends the 'access token' to the 'resource server'
+			- the 'resource server' replies with the requested resource
+- identity and access management (IAM)
+	- auth(n+z) as a service
+	- a system that manages 
+		- identities
+		- authentication
+		- authorization
+		- roles
+		- privileges
+	- comes into play for larger networks
+		- e.g., JCU uses WSO2
+	- can provide federated authentication (single sign-on, or SSO)
+	- types of identity providers (IdP, IDP)
+		- Security Assertion Markup Language (SAML)
+			- provides for the exchange of authentication and authorization information across security domains
+			- XML-based
+		- OpenID Connect
+			- an identity layer built on top of OAuth
+
+# reference
+1. [password haystacks](https://www.grc.com/haystack.htm)
+2. [base64](https://en.wikipedia.org/wiki/Base64)
