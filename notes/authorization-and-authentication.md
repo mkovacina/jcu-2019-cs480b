@@ -1,6 +1,8 @@
 # objective
 to provide a basic overview of authentication and authorization in the modern day
+
 # tangent
+"A is A"
 
 # notes
 - simple definitions
